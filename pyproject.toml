@@ -8,10 +8,28 @@ version = "0.1.0"
 description = "A practice project for learning Scrapy."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+keywords = ["scrapy", "crawler", "spider", "learning"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Scrapy",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
 dependencies = [
     "Scrapy==2.19.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/fanyce/scrapy-practice"
+Repository = "https://github.com/fanyce/scrapy-practice.git"
+Issues = "https://github.com/fanyce/scrapy-practice/issues"
+
 [tool.setuptools.packages.find]
 include = ["scrapy_practice*"]
-
