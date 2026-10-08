@@ -1,0 +1,642 @@
+C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Scripts\python.exe -m scrapy crawl xidian 
+2026-10-07 16:03:07 [scrapy.utils.log] INFO: Scrapy 2.19.0 started (bot: scrapy_practice)
+2026-10-07 16:03:07 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.1.3',
+ 'libxml2': '2.11.9',
+ 'cssselect': '1.5.0',
+ 'parsel': '1.12.1',
+ 'w3lib': '2.5.0',
+ 'Twisted': '26.4.0',
+ 'Python': '3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]',
+ 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.3 29 Sep 2026)',
+ 'cryptography': '50.0.2',
+ 'Platform': 'Windows-11-10.0.26200-SP0'}
+2026-10-07 16:03:07 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-10-07 16:03:07 [asyncio] DEBUG: Using selector: SelectSelector
+2026-10-07 16:03:07 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-10-07 16:03:07 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-10-07 16:03:07 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2026-10-07 16:03:07 [scrapy.extensions.telnet] INFO: Telnet Password: 685225f75a67ac38
+2026-10-07 16:03:07 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.remote_control.RemoteControl']
+2026-10-07 16:03:07 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scrapy_practice',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scrapy_practice.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scrapy_practice.spiders']}
+2026-10-07 16:03:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-10-07 16:03:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware',
+ 'scrapy.spidermiddlewares.metacopy.MetaCopyDetectionMiddleware']
+2026-10-07 16:03:08 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2026-10-07 16:03:08 [scrapy.core.engine] INFO: Spider opened
+2026-10-07 16:03:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-10-07 16:03:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-10-07 16:03:08 [scrapy.extensions.remote_control] INFO: Remote control HTTP server listening on port 1480 (job 11860-cadccaf249d64595a42972baad62db27)
+2026-10-07 16:03:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://job.xidian.edu.cn/robots.txt> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2026-10-07 16:03:09 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://job.xidian.edu.cn/robots.txt> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2026-10-07 16:03:10 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://job.xidian.edu.cn/robots.txt> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2026-10-07 16:03:10 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://job.xidian.edu.cn/campus>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+Traceback (most recent call last):
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\utils\_download_handlers.py", line 55, in wrap_twisted_exceptions
+    yield
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 140, in download_request
+    return await maybe_deferred_to_future(agent.download_request(request))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\downloadermiddlewares\robotstxt.py", line 100, in robot_parser
+    resp = await self.crawler.engine.download_async(robotsreq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\engine.py", line 491, in download_async
+    response_or_request = await maybe_deferred_to_future(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\twisted\internet\defer.py", line 1834, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\engine.py", line 514, in _download
+    result = yield self.downloader.fetch(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\twisted\internet\defer.py", line 1834, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\__init__.py", line 226, in fetch
+    result: Response | Request = yield (
+                                 ^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\twisted\internet\defer.py", line 1247, in adapt
+    extracted: _SelfResultT | Failure = result.result()
+                                        ^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 87, in download_async
+    result = await self._process_exception(ex, request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 156, in _process_exception
+    raise exception
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 80, in download_async
+    result: Response | Request = await self._process_request(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 114, in _process_request
+    return await download_func(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\__init__.py", line 281, in _enqueue_request
+    return await maybe_deferred_to_future(d)  # fired in _wait_for_download()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\__init__.py", line 348, in _wait_for_download
+    response = await self._download(slot, request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\__init__.py", line 318, in _download
+    response: Response = await self.handlers.download_request_async(request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\handlers\__init__.py", line 168, in download_request_async
+    return await handler.download_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 139, in download_request
+    with wrap_twisted_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fpy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\fpy\Documents\go\code\scrapy-practice\.venv\Lib\site-packages\scrapy\utils\_download_handlers.py", line 65, in wrap_twisted_exceptions
+    raise DownloadFailedError(str(e)) from e
+scrapy.exceptions.DownloadFailedError: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2026-10-07 16:03:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://job.xidian.edu.cn/campus> (referer: None)
+2026-10-07 16:03:12 [xidian] INFO: status=200 url=https://job.xidian.edu.cn/campus
+2026-10-07 16:03:12 [xidian] INFO: page content is <!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/5d41dd9d/artdialog/skins/blue.css" />
+<link rel="stylesheet" type="text/css" href="/assets/5d41dd9d/selector/selector.css" />
+<link rel="stylesheet" type="text/css" href="/static/template17_xd/c/css.css" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/static/template17_xd/c/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/template17_xd/c/font/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/static/common/c/common-1200.css?v=20240906180817" />
+<link rel="stylesheet" type="text/css" href="/static/electronic/c/css.css?v=20240906180818" />
+<link rel="stylesheet" type="text/css" href="/static/jysd-jylm/c/jysc-form.css?v=20240906180815" />
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/c/font_1976613_c6ika4bzla.css" />
+<link rel="stylesheet" type="text/css" href="/static/color/template17-red.css" />
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/5d41dd9d/artdialog/jquery.artDialog.js?skin=blue"></script>
+<script type="text/javascript" src="/static/js/base64.min.js"></script>
+<script type="text/javascript" src="/static/jysd-jylm/j/html5.js"></script>
+<script type="text/javascript" src="/static/jysd-jylm/j/jquery-ui-1.10.3.full.min.js"></script>
+<script type="text/javascript" src="/static/jysd-jylm/j/jquery.royalslider.min.js"></script>
+<script type="text/javascript" src="/static/template17_xd/j/swiper.min.js"></script>
+<script type="text/javascript" src="/static/template17_xd/j/jQuery.rTabs.js"></script>
+<script type="text/javascript" src="/static/template17_xd/j/SuperSlide.js"></script>
+<script type="text/javascript" src="/static/js/j.core.js?v=20210810110906"></script>
+<script type="text/javascript" src="/static/js/jui.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var JSPATH='/static/js/data/';
+/*]]>*/
+</script>
+<title>招聘公告 - 西安电子科技大学</title>
+  <link href="/static/iconfont/iconfont.css" rel="stylesheet">
+                              </head>
+
+<body><script type="text/javascript" src="/assets/5d41dd9d/selector/selector.js"></script>
+
+  <div class="wrapper">
+          <div class="toprow">
+        <div class="container-index">
+                      <!-- <div class="logo_box">
+                        <a href="/user/login" class="color1">
+                            <i class="iconfont icon-xuesheng"></i>
+                            <span>学生登录</span>
+                        </a>
+                                                    <a href="/default/xd/type/login/role/teacher" class="color2">
+                                <i class="iconfont icon-xuexiao2"></i>
+                                <span>学校登录</span>
+                            </a>
+                                                <a href="/vip/user/login" class="color3">
+                            <i class="iconfont icon-shigongdanwei"></i>
+                            <span>单位登录</span>
+                        </a>
+                    </div> -->
+          
+          <a href="/">西安电子科技大学就业信息网</a>
+        </div>
+      </div>
+      <div class="header">
+        <div class="container-index">
+                      <div class="login-box">
+                                                                                                        <div class="item-s">
+                    <div class="title">
+                      <p class="name">首页<span class="iconfont icon-right"></p>
+                      <p></p>
+                    </div>
+                    <div class="dropdown-box">
+                      <ul class="dropdown ">
+                                                                                                                <li><a href="https://job.xidian.edu.cn/" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>就业网首页                                  </a></li>
+                                                                                                      </ul>
+                    </div>
+                  </div>
+                                                                                                                        <div class="item-s">
+                    <div class="title">
+                      <p class="name">学生服务<span class="iconfont icon-right"></p>
+                      <p></p>
+                    </div>
+                    <div class="dropdown-box">
+                      <ul class="dropdown ">
+                                                                                                                <li><a href="/campus" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>就业信息                                  </a></li>
+                                                                                                                      <li><a href="/affair/sinfo" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>生源核对                                  </a></li>
+                                                                                                                      <li><a href="/home" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>办事大厅                                  </a></li>
+                                                                                                                                                                                                                      </ul>
+                    </div>
+                  </div>
+                                                                                                                        <div class="item-s">
+                    <div class="title">
+                      <p class="name">单位服务<span class="iconfont icon-right"></p>
+                      <p></p>
+                    </div>
+                    <div class="dropdown-box">
+                      <ul class="dropdown ">
+                                                                                                                <li><a href="/news/view/tag/zpsc" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>招聘指南                                  </a></li>
+                                                                                                                      <li><a href="/news/view/tag/syxx" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>生源信息                                  </a></li>
+                                                                                                                      <li><a href="/news/view/tag/xylxfs" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>院系联系                                  </a></li>
+                                                                                                                      <li><a href="/news/view/tag/xxfbfs" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>信息发布                                  </a></li>
+                                                                                                                      <li><a href="/news/view/tag/chxz" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>参会须知                                  </a></li>
+                                                                                                      </ul>
+                    </div>
+                  </div>
+                                                                                                                                                                                    <div class="item-s">
+                    <div class="title">
+                      <p class="name">关于我们<span class="iconfont icon-right"></p>
+                      <p></p>
+                    </div>
+                    <div class="dropdown-box">
+                      <ul class="dropdown ">
+                                                                                                                <li><a href="/news/view/tag/zxjs" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>中心介绍                                  </a></li>
+                                                                                                                      <li><a href="/news/view/tag/zzjg" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>组织机构                                  </a></li>
+                                                                                                                      <li><a href="/news/view/tag/lxfs" target="_self">
+                                    <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>联系方式                                  </a></li>
+                                                                                                      </ul>
+                    </div>
+                  </div>
+                                                                          <div class="item-s  login_con">
+                <div class="title">
+                  <p class="name">登录
+                    <span class="iconfont icon-right">
+                  </p>
+                </div>
+                <div class="dropdown-box">
+                  <ul class="dropdown">
+                    <li><a href="/user/login">
+                        <p class="bgicon"><img src="/static/template17_xd/i/stu.png" alt=""></p>学生登录
+                      </a></li>
+                    <li><a href="/vip/user/login">
+                        <p class="bgicon"><img src="/static/template17_xd/i/unit.png" alt=""></p>单位登录
+                      </a></li>
+                                          <li><a href="/default/xd/type/login/role/teacher">
+                          <p class="bgicon"><img src="/static/template17_xd/i/school.png" alt=""></p>教师登录
+                        </a></li>
+                                      </ul>
+                </div>
+              </div>
+              <div class="search item-s">
+                <i class="iconfont icon-sousuo567"></i>
+                <input type="text" name="title" placeholder="请输入关键词汇" class="search-box">
+              </div>
+                <script type="text/javascript">
+                    $('.search').click(function() {
+                        var val = $('input[name="title"]').val();
+                        if (val && $('input[name="title"]').hasClass('active')) {
+                            location.href = '/search/list?keyword='+ val;
+                        }
+                    })
+                </script>
+            </div>
+                                <a href="/" class="logo"><img src="/attachment/university/ef/df/8a69d803e45fc1c665eb74ba78d91bc4.png?v=20210902211727" alt="西安电子科技大学就业信息网"></a>
+          
+        </div>
+      </div>
+        <div class="css-out-content">
+            <div class="container"><div class="breadcrumb"><ol>
+<li><a href="http://job.xidian.edu.cn">首页</a></li><li><i class="icon icon-xiangyoujiantou"></i></li><li><a href="/campus">招聘公告</a></li></ol></div></div><div class="sites-2019-container">
+    <!-- 2级导航-->
+        
+        <div id="nav">
+            <div class="container css-common-subnav">
+                <ul class="subNav">
+                                                                                                                                            <li class="curr">
+                                        <a href="/campus">招聘公告</a>
+                                    </li>
+                                                                                                                                                                                                                                                                            <li>
+                                        <a href="/teachin/index/zone/南校区">长安校区宣讲会</a>
+                                    </li>
+                                                                                                                                                                                                                                <li>
+                                        <a href="/teachin/index/zone/北校区">雁塔校区宣讲会</a>
+                                    </li>
+                                                                                                                                                                                                                                <li>
+                                        <a href="/teachin/index/type/online">网络宣讲会</a>
+                                    </li>
+                                                                                                                                                                                                                                <li>
+                                        <a href="/jobfair">组团招聘</a>
+                                    </li>
+                                                                                                                                                                                                                                <li>
+                                        <a href="/news/index/tag/gfjg">国防军工</a>
+                                    </li>
+                                                                                                                                                                                                                                <li>
+                                        <a href="/news/index/tag/jcxm">基层项目</a>
+                                    </li>
+                                                                                                                                                                                                                                                                            <li>
+                                        <a href="/news/index/tag/gjzz">国际组织</a>
+                                    </li>
+                                                                                                                                                                                                                                                                            <li>
+                                        <a href="/news/index/tag/kytj">考研调剂</a>
+                                    </li>
+                                                                                                                                                                                                                                                                                                                        <li>
+                                        <a href="/job/search/d_category%5B0%5D/0/d_category%5B1%5D/100/d_category%5B2%5D/101/d_category%5B3%5D/102">全部职位</a>
+                                    </li>
+                                                                                                                        </ul>
+                <!-- 快捷菜单 -->
+                <!-- 快捷菜单 -->
+<div class="quickMenu" id="quickMenu">
+    </div>
+<!-- 快捷菜单完 -->
+                <!-- 快捷菜单完 -->
+            </div>
+        </div>
+                    <div class="container cl">
+    <div class="schBox">
+        <div class="query-container">
+            <form name="campus" class="css-form" method="get" action="/campus/index">
+                <div class="form-content query-table">
+                    <div class="row percent70">
+                            <label for="">招聘公告名称</label>
+                        <div class="input-container iconelement before-icon">
+                            <input type="text" class="txt" placeholder="输入查询关键字" name="keyword" value="" class="keyWord" />
+                            <i class="icon icon-aui-icon-search"></i>
+                        </div>
+                    </div>
+                                        <div class="row">
+                        <label>发布时间</label>
+                        <div class="selectDiv">
+                            <select name="time" id="time">
+<option value="">请选择</option>
+<option value="0">不限时间</option>
+<option value="1">近1天</option>
+<option value="3">近3天</option>
+<option value="7">近1周</option>
+<option value="14">近2周</option>
+<option value="30">近1月</option>
+<option value="60">近2月</option>
+</select>                        </div>
+                    </div>
+                    <div class="row actions">
+                        <label>&nbsp;</label>
+                        <div class="btn-inline">
+                            <button type="submit" class="btn btn-primary btn-md">搜索</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="mn z view view2 infoB" id="mn">
+        <div class="infoBox campus-index-front-list">
+            <ul class="infoTit">
+                <li class="span7" style="width:740px">招聘公告名称</li>
+                <li class="span4" style="width:150px">发布时间</li>
+            </ul>
+
+            <section id="content2030" style="padding: 50px;background-image: url(/static/axui-v1.0.2-20210211/images/loading.gif);background-position: center;background-repeat: no-repeat;"></section>        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('#schRange').MySelector({
+            js:["\u5168\u90e8","\u6821\u5185\u53d1\u5e03","\u6821\u5916\u53d1\u5e03"],
+            Max:1,
+            title:'范围'
+        });
+        $('#schCity').MySelector({
+            js:'DataDistrict',
+            Max:5,
+            type:2,
+            title:'工作城市'
+        });
+        $('#schTime').MySelector({
+            js:{"0":"\u4e0d\u9650\u65f6\u95f4","1":"\u8fd11\u5929","3":"\u8fd13\u5929","7":"\u8fd11\u5468","14":"\u8fd12\u5468","30":"\u8fd11\u6708","60":"\u8fd12\u6708"},
+            Max:1,
+            title:'发布时间'
+        });
+
+    });
+</script></div>
+</div>
+
+</div>
+<div class="css-footer">
+    <div class="container-index">
+        <div class="left">
+            <img src="/static/template12/i/flogo.png" alt="">
+        </div>
+        <div class="content">
+            <div class="top">
+                <div class="item">
+                    <p>学生服务：</p>
+                    <span>029-81891198</span>
+                    <span><i></i>029-81891222</span>
+                </div>
+                <div class="item">
+                    <p>单位服务：</p>
+                    <span>029-88202234</span>
+                    <span><i></i>029-88202307</span>
+                </div>
+                <div class="item">
+                    <p>电子邮箱：</p>
+                    <span>xdjy@xidian.edu.cn</span>
+                </div>
+            </div>
+            <span id="cnzz_stat_icon_1280320565"><a href="https://www.cnzz.com/stat/website.php?web_id=1280320565" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="https://icon.cnzz.com/img/pic.gif"></a></span>
+        </div>
+        <div class="right">
+            <div class="box">
+                <img src="/static/template12/i/er.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="bottomBox">
+        <div class="bottom">
+            <p>友情链接：</p>
+            <div class="item">
+                                        <a href="http://www.moe.gov.cn/ " target="_blank">教育部</a>
+                                        <a href="https://www.chsi.com.cn/ " target="_blank">学信网</a>
+                                        <a href="https://xidian.ncss.cn/student/index.html " target="_blank">国家24365</a>
+                                        <a href="http://jyweb.sneducloud.com/website/index.aspx " target="_blank">陕西省高校就业信息网</a>
+                                        <a href="https://www.csc.edu.cn/ " target="_blank">国家留学网</a>
+                                        <a href="https://yz.chsi.com.cn/ " target="_blank">中国研究生招生网</a>
+                                        <a href="https://gj.ncss.cn/index.html " target="_blank">国际组织实习信息服务平台</a>
+                                        <a href="http://xibu.youth.cn/ " target="_blank">西部计划</a>
+                                        <a href="https://www.gfbzb.gov.cn/ " target="_blank">全国征兵网</a>
+                                        <a href="http://www.xds.work/ " target="_blank">选调生</a>
+                            </div>
+        </div>
+    </div> -->
+</div>
+<script src="/static/ningcc/j/slider.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $.datepicker.setDefaults({
+            closeText: '关闭',
+            prevText: '',
+            nextText: '',
+            currentText: '今天',
+            monthNames: ['01', '02', '03', '04', '05', '06',
+                '07', '08', '09', '10', '11', '12'
+            ],
+            monthNamesShort: ['一', '二', '三', '四', '五', '六',
+                '七', '八', '九', '十', '十一', '十二'
+            ],
+            dayNames: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+            dayNamesShort: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+            dayNamesMin: ['日', '一', '二', '三', '四', '五', '六'],
+            weekHeader: '周',
+            dateFormat: 'yy-mm-dd',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: true,
+            yearSuffix: '/'
+        });
+        //切换
+        $(".caption").each(function() {
+            var th = $(this);
+            $("li a", this).mouseover(function(event) {
+                var currentIndex = $(this).parent().index()
+                $(this).parent('li').addClass("current").siblings('li').removeClass('current');
+                $(this).parents(".caption").next('.newslistBox').find(".contentList").addClass('hide').eq($(this).parent('li').index()).removeClass('hide');
+                $(this).parents(".caption").next('.content').find(">ul,>div").addClass('hide').eq($(this).parent('li').index()).removeClass('hide');
+                $('.contentList').eq(currentIndex).find(".tab-con-item").css("left", '0')
+                event.preventDefault();
+            }).eq(2).mouseover();
+        });
+
+        $(".moreurl", this).click(function(event) {
+            $(this).attr("href", $(this).parent().siblings('.caption').children(".j-tab-nav").find("li a").attr("href"));
+        });
+
+        jQuery(document).ready(function($) {
+            $('#full-width-slider').royalSlider({
+                arrowsNav: true,
+                loop: true,
+                keyboardNavEnabled: true,
+                controlsInside: false,
+                imageScaleMode: 'fill',
+                arrowsNavAutoHide: false,
+                autoScaleSlider: true,
+                autoScaleSliderWidth: 960,
+                autoScaleSliderHeight: 420,
+                controlNavigation: 'bullets',
+                thumbsFitInViewport: false,
+                navigateByClick: true,
+                startSlideId: 0,
+                autoPlay: {
+                    enabled: true,
+                    stopAtAction: false,
+                    pauseOnHover: true,
+                    delay: 5000
+                },
+                transitionType: 'move',
+                globalCaption: true,
+                // transitionSpeed: 600,
+                autoPlay: {
+                    enabled: true,
+                    stopAtAction: false,
+                    pauseOnHover: true,
+                    delay: 5000
+                },
+                deeplinking: {
+                    enabled: true,
+                    change: false
+                },
+                imgWidth: 1200,
+                imgHeight: 420
+            });
+
+        });
+        $(".search i").click(function() {
+            $(".search-box").toggleClass("active");
+
+        })
+        $(".css-navbar .css-navlist>li").hover(function() {
+            $(this).siblings().find(".css-dropdown").hide();
+            $(this).find(".css-dropdown").show();
+        }, function() {
+            var obj = $(this).find(".css-dropdown");
+            var focusi = false;
+            obj.hover(function() {
+                focusi = true;
+            }, function() {
+                $(this).hide();
+            });
+            setTimeout(function() {
+                if (!focusi) {
+                    obj.hide();
+                }
+            }, 20);
+        });
+        var cssfooterHeight = $(".css-footer").height();
+        $(".css-out-content").css({
+            "padding-bottom": cssfooterHeight
+        });
+        $(".css-footer").css({
+            "margin-top": -(cssfooterHeight)
+        });
+        // if ($(".banner").html()) {
+        //     $(".header").css('position', 'absolute')
+        // }
+
+    });
+</script>
+
+<script type="text/javascript" src="/assets/5d41dd9d/artdialog/jquery.artDialog.js"></script>
+<script type="text/javascript" src="/assets/5d41dd9d/artdialog/plugins/iframeTools.js"></script>
+<script type="text/javascript" src="/static/electronic/j/common.js?v=20240906180818"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+			var _paq = window._paq = window._paq || [];
+			_paq.push(["setDocumentTitle", ""]);
+			_paq.push(["trackPageView"]);
+			(function() {
+				var u="/"; _paq.push(["setTrackerUrl", u+"tj.php?_k=ad53c229856003"]); _paq.push(["setSiteId", "2227"]);
+				var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+				g.type="text/javascript"; g.async=true; g.src="/static/js/tj.js"; s.parentNode.insertBefore(g,s);
+			})();
+		
+jQuery(function($) {
+
+                    $("#content2030").each(function() {
+                        $(this).replaceWith(Base64.decode(unzip("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").substr(25)).substr(35));
+                    });
+                
+});
+/*]]>*/
+</script>
+</body>
+
+</html>
+2026-10-07 16:03:12 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-10-07 16:03:12 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/scrapy.exceptions.DownloadFailedError': 3,
+ 'downloader/request_bytes': 948,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 8467,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 4.233999999999469,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 10, 7, 8, 3, 12, 349998, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 30700,
+ 'httpcompression/response_count': 1,
+ 'items_per_minute': 0.0,
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 2,
+ 'log_count/INFO': 6,
+ 'response_received_count': 1,
+ 'responses_per_minute': 15.0,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/scrapy.exceptions.DownloadFailedError': 2,
+ "robotstxt/exception_count/<class 'scrapy.exceptions.DownloadFailedError'>": 1,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2026, 10, 7, 8, 3, 8, 116765, tzinfo=datetime.timezone.utc)}
+2026-10-07 16:03:12 [scrapy.core.engine] INFO: Spider closed (finished)
+
+Process finished with exit code 0
